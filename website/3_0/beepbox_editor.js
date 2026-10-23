@@ -1872,7 +1872,7 @@ var beepbox = (function (exports) {
 		outline: 3px solid ${ColorConfig.uiWidgetBackground};
 	}
 	.beepboxEditor .trackAndMuteContainer {
-		width: 512px;
+		width: 1420px;
 	}
 	.beepboxEditor .play-pause-area {
 		display: flex;
@@ -3275,7 +3275,7 @@ var beepbox = (function (exports) {
             this.tempo = 150;
             this.reverb = 0;
             this.beatsPerBar = 8;
-            this.barCount = 16;
+            this.barCount = 64;
             this.patternsPerChannel = 8;
             this.rhythm = 1;
             this.instrumentsPerChannel = 1;
@@ -10176,8 +10176,8 @@ var beepbox = (function (exports) {
             this._mouseOver = false;
             this._mousePressed = false;
             this._mouseDragging = false;
-            this._barWidth = 32;
-            this._channelHeight = 32;
+            this._barWidth = 10;
+            this._channelHeight = 10;
             this._renderedChannelCount = 0;
             this._renderedBarCount = 0;
             this._renderedPatternCount = 0;
@@ -11046,7 +11046,7 @@ var beepbox = (function (exports) {
         constructor(_doc, _trackContainer) {
             this._doc = _doc;
             this._trackContainer = _trackContainer;
-            this._editorWidth = 512;
+            this._editorWidth = 1420;
             this._editorHeight = 20;
             this._notches = SVG.svg({ "pointer-events": "none" });
             this._handle = SVG.rect({ fill: ColorConfig.uiWidgetBackground, x: 0, y: 2, width: 10, height: this._editorHeight - 4 });
@@ -11054,7 +11054,7 @@ var beepbox = (function (exports) {
             this._leftHighlight = SVG.path({ fill: ColorConfig.hoverPreview, "pointer-events": "none" });
             this._rightHighlight = SVG.path({ fill: ColorConfig.hoverPreview, "pointer-events": "none" });
             this._svg = SVG.svg({ style: `background-color: ${ColorConfig.editorBackground}; touch-action: pan-y; position: absolute;`, width: this._editorWidth, height: this._editorHeight }, this._notches, this._handle, this._handleHighlight, this._leftHighlight, this._rightHighlight);
-            this.container = HTML.div({ class: "barScrollBar", style: "width: 512px; height: 20px; overflow: hidden; position: relative;" }, this._svg);
+            this.container = HTML.div({ class: "barScrollBar", style: "width: 1420px; height: 20px; overflow: hidden; position: relative;" }, this._svg);
             this._mouseX = 0;
             this._mouseDown = false;
             this._mouseOver = false;
@@ -15336,7 +15336,7 @@ var beepbox = (function (exports) {
             this.channel = 0;
             this.bar = 0;
             this.volume = 75;
-            this.trackVisibleBars = 16;
+            this.trackVisibleBars = 64;
             this.barScrollPos = 0;
             this.prompt = null;
             this._recovery = new SongRecovery();
@@ -15636,7 +15636,7 @@ var beepbox = (function (exports) {
         }
         getChannelHeight() {
             const squashed = this.getMobileLayout() || this.song.getChannelCount() > 4 || (this.song.barCount > this.trackVisibleBars && this.song.getChannelCount() > 3);
-            return squashed ? 27 : 32;
+            return squashed ? 10 : 12;
         }
         getFullScreen() {
             return !this.getMobileLayout() && this.fullScreen;

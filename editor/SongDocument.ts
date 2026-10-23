@@ -38,7 +38,7 @@ export class SongDocument {
 	public readonly recentPatternInstruments: number[][] = [];
 	public readonly viewedInstrument: number[] = [];
 	
-	public trackVisibleBars: number = 16;
+	public trackVisibleBars: number = 64;
 	public trackVisibleChannels: number = 4;
 	public barScrollPos: number = 0;
 	public channelScrollPos: number = 0;

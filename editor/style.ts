@@ -1097,13 +1097,13 @@ document.head.appendChild(HTML.style({type: "text/css"}, `
 }
 
 .beepboxEditor .channelBoxLabel {
-	font-size: 20px;
+	font-size: 10px;
 	font-family: sans-serif;
 	font-weight: bold;
 }
 
 .beepboxEditor .channelBoxLabel.smaller-digits {
-	font-size: 18px;
+	font-size: 9px;
 }
 
 .beepboxEditor .muteEditor {
@@ -1306,12 +1306,13 @@ document.head.appendChild(HTML.style({type: "text/css"}, `
 	}
 	.beepboxEditor {
 		flex-direction: row;
+		max-width: 1420px;
 	}
 	.beepboxEditor:focus-within {
 		outline: 3px solid ${ColorConfig.uiWidgetBackground};
 	}
 	.beepboxEditor .trackAndMuteContainer {
-		width: 512px;
+		width: 1420px;
 	}
 	.beepboxEditor .play-pause-area {
 		display: flex;

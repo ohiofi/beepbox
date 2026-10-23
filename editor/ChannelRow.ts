@@ -31,7 +31,7 @@ export class Box {
 }
 
 export class ChannelRow {
-	public static patternHeight: number = 28;
+	public static patternHeight: number = 40;
 	
 	private _renderedBarWidth: number = -1;
 	private _boxes: Box[] = [];

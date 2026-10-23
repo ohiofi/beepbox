@@ -6,7 +6,7 @@ import {HTML, SVG} from "imperative-html/dist/esm/elements-strict.js";
 import {EasyPointers} from "./EasyPointers.js";
 
 export class BarScrollBar {
-	private readonly _editorWidth: number = 512;
+	private readonly _editorWidth: number = 1420;
 	private readonly _editorHeight: number = 20;
 	
 	private readonly _notches: SVGSVGElement = SVG.svg({"pointer-events": "none"});
@@ -23,7 +23,7 @@ export class BarScrollBar {
 		this._rightHighlight,
 	);
 	
-	public readonly container: HTMLElement = HTML.div({class: "barScrollBar", style: "width: 512px; height: 20px; overflow: hidden; position: relative;"}, this._svg);
+	public readonly container: HTMLElement = HTML.div({class: "barScrollBar", style: "width: 1420px; height: 20px; overflow: hidden; position: relative;"}, this._svg);
 	
 	private readonly _pointers: EasyPointers = new EasyPointers(this.container);
 	

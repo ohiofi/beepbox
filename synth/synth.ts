@@ -1837,10 +1837,10 @@ export class Song {
 		this.scale = 0;
 		this.key = 0;
 		this.loopStart = 0;
-		this.loopLength = 4;
+		this.loopLength = 64;
 		this.tempo = 150;
 		this.beatsPerBar = 8;
-		this.barCount = 16;
+		this.barCount = 64;
 		this.patternsPerChannel = 8;
 		this.rhythm = 1;
 		this.layeredInstruments = false;
